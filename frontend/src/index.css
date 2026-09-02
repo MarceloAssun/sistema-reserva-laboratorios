@@ -1,0 +1,306 @@
+:root {
+  --bg: #eef2f6;
+  --sidebar: #16324f;
+  --sidebar-2: #1f4568;
+  --accent: #2a9d8f;
+  --text: #1c2a39;
+  --muted: #5b6b7c;
+  --card: #ffffff;
+  --danger: #c0392b;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+}
+
+.sidebar {
+  background: linear-gradient(180deg, var(--sidebar), var(--sidebar-2));
+  color: #fff;
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.brand strong,
+.topbar h1,
+section h2 {
+  margin: 0;
+}
+
+.brand span,
+.sidebar-user small {
+  display: block;
+  opacity: 0.8;
+  font-size: 0.85rem;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.sidebar nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.sidebar-user {
+  margin-top: auto;
+}
+
+.content {
+  padding: 1.25rem 1.5rem 2rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(22, 50, 79, 0.08);
+}
+
+.cards,
+.lista,
+.grade {
+  display: grid;
+  gap: 1rem;
+}
+
+.cards {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  margin: 1rem 0;
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.8rem;
+  margin-top: 0.35rem;
+}
+
+.form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 520px;
+  margin-top: 1rem;
+}
+
+.form.inline {
+  max-width: none;
+  grid-template-columns: 2fr 1fr auto;
+  align-items: end;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #cfd8e3;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.busca {
+  max-width: 360px;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.btn:disabled {
+  opacity: 0.65;
+}
+
+.btn-secondary {
+  background: var(--sidebar);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.content .btn-ghost {
+  border-color: #cfd8e3;
+  color: var(--text);
+}
+
+.btn-danger {
+  background: var(--danger);
+}
+
+.acoes {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.pendente {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.aprovada {
+  background: #d4edda;
+  color: #155724;
+}
+
+.rejeitada {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.cancelada {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.erro {
+  color: var(--danger);
+}
+
+.ok {
+  color: #155724;
+}
+
+.estado {
+  color: var(--muted);
+}
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(160deg, #16324f, #2a9d8f);
+}
+
+.login-card {
+  width: min(420px, 92vw);
+}
+
+.grade {
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  margin-top: 1rem;
+}
+
+.slot {
+  border-radius: 10px;
+  padding: 0.8rem;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.slot.livre {
+  background: #e8f6f3;
+}
+
+.slot.ocupado {
+  background: #f8d7da;
+}
+
+.tabela-wrap {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.7rem;
+  border-bottom: 1px solid #edf1f5;
+}
+
+@media (max-width: 860px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sidebar-user {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .form.inline {
+    grid-template-columns: 1fr;
+  }
+}
